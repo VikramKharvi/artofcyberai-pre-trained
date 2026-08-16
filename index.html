@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fifteen research chapters on data, tokenization, Transformer architecture, scaling, sparse experts, optimization, distributed training, and reproducible language-model pre-training.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Vikram Kharvi">
+  <link rel="canonical" href="https://pre-trained.artofcyberai.com/">
+  <meta name="theme-color" content="#e7dcc8">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pre-trained — Art of Cyber AI">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Pre-training Language Models — Vikram Kharvi">
+  <meta property="og:description" content="Fifteen research chapters on data, tokenization, Transformer architecture, scaling, sparse experts, optimization, distributed training, and reproducible language-model pre-training.">
+  <meta property="og:url" content="https://pre-trained.artofcyberai.com/">
+  <meta property="og:image" content="https://artofcyberai.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vikram Kharvi's applied AI research">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pre-training Language Models — Vikram Kharvi">
+  <meta name="twitter:description" content="Fifteen research chapters on data, tokenization, Transformer architecture, scaling, sparse experts, optimization, distributed training, and reproducible language-model pre-training.">
+  <meta name="twitter:image" content="https://artofcyberai.com/og-image.png">
+  <link rel="alternate" type="application/atom+xml" title="Art of Cyber AI research feed" href="https://artofcyberai.com/feed.xml">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","@id":"https://pre-trained.artofcyberai.com/#blog","url":"https://pre-trained.artofcyberai.com/","name":"Pre-training Language Models — Vikram Kharvi","description":"Fifteen research chapters on data, tokenization, Transformer architecture, scaling, sparse experts, optimization, distributed training, and reproducible language-model pre-training.","inLanguage":"en","image":"https://artofcyberai.com/og-image.png","author":{"@type":"Person","name":"Vikram Kharvi","url":"https://artofcyberai.com/"}}</script>
+  <title>Pre-training Language Models — Vikram Kharvi</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=lifecycle2">
+</head>
+<body class="blog-page blog-index-page">
+  <a class="skip-link" href="#chapters">Skip to chapters</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="monogram" href="https://artofcyberai.com/" aria-label="Art of Cyber AI, home">VK<span class="ink-dot"></span></a>
+    <div class="nav-links">
+      <a href="https://pre-trained.artofcyberai.com/" aria-current="page">Pre-trained</a>
+      <a href="https://trainrl.com/">Post-trained</a>
+      <a href="https://inference.artofcyberai.com/">Inference</a>
+    </div>
+    <a class="nav-site" href="https://artofcyberai.com/">Main site <span aria-hidden="true">&nearr;</span></a>
+  </nav>
+
+  <header class="series-hero">
+    <p class="margin-code" aria-hidden="true">PRE-TRAINED / 15 CHAPTERS</p>
+    <div class="reveal is-visible">
+      <a class="back-link" href="https://artofcyberai.com/">&larr; Back home</a>
+      <p class="eyebrow"><span></span> Data &middot; tokenization &middot; architecture</p>
+      <h1>Build the base model,<br><em>one contract at a time.</em></h1>
+    </div>
+    <div class="series-intro reveal is-visible">
+      <p class="series-count">15 chapters</p>
+      <p>Move from text representation and data design to architecture, sparse experts, optimization, distributed training, and reproducible evidence.</p>
+      <a href="#chapters">See every chapter <span>&darr;</span></a>
+    </div>
+  </header>
+
+  <main id="chapters">
+    <section class="title-board" aria-labelledby="chapters-title">
+      <div class="title-board-heading reveal">
+        <div>
+          <p class="section-index">Pre-trained / 15 chapters</p>
+          <h2 id="chapters-title">How foundation models learn</h2>
+        </div>
+        <p>Fifteen focused chapters connect the data, mathematical, architectural, and systems decisions behind a base language model.</p>
+      </div>
+
+      <ol class="title-list tech-title-list pretraining-chapter-list">
+              <li class="title-item is-published reveal"><a href="tech-llm-system-map.html#objective"><div class="issue-number">01</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 01 · 13 Aug 2026</span><span>6 min read</span></div><h3>What a Language Model Learns</h3><p>Token representations, autoregressive factorization, teacher forcing, cross-entropy, and the limits of next-token prediction.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#tokenizer"><div class="issue-number">02</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 02 · 13 Aug 2026</span><span>8 min read</span></div><h3>From Unicode to Byte-Pair Encoding</h3><p>Code points, UTF-8 bytes, merge learning, vocabulary construction, compression, and exact encode–decode behavior.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#corpus"><div class="issue-number">03</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 03 · 13 Aug 2026</span><span>7 min read</span></div><h3>Corpus Design and Data Lineage</h3><p>Source registration, parsing, filtering, deduplication, decontamination, mixture weights, document boundaries, and immutable shards.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#tensors"><div class="issue-number">04</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 04 · 13 Aug 2026</span><span>5 min read</span></div><h3>Batches, Tensor Shapes, and Shifted Targets</h3><p>Turn token streams into input–target windows, track batch and sequence dimensions, mask invalid positions, and prevent split leakage.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-transformer-architecture.html#stream"><div class="issue-number">05</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 05 · 13 Aug 2026</span><span>5 min read</span></div><h3>The Transformer Residual Stream</h3><p>Follow embeddings through encoder, decoder, and encoder–decoder families while keeping every tensor contract explicit.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-transformer-architecture.html#attention"><div class="issue-number">06</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 06 · 13 Aug 2026</span><span>7 min read</span></div><h3>Queries, Keys, Values, and Causal Masks</h3><p>Build scaled dot-product attention, understand multi-head projections, apply causal and padding masks, and verify the softmax axis.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-transformer-architecture.html#block"><div class="issue-number">07</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 07 · 13 Aug 2026</span><span>6 min read</span></div><h3>Residual Blocks, Normalization, and MLPs</h3><p>Assemble pre-norm attention and feed-forward branches, preserve gradient paths, and reason about width, depth, and activation choice.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-transformer-architecture.html#position"><div class="issue-number">08</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 08 · 13 Aug 2026</span><span>6 min read</span></div><h3>Position and Context Length</h3><p>Compare learned positions, sinusoidal encodings, rotary embeddings, relative bias, extrapolation, and the real cost of longer context.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-transformer-architecture.html#cache"><div class="issue-number">09</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 09 · 13 Aug 2026</span><span>6 min read</span></div><h3>KV Caches and Efficient Attention</h3><p>Separate full-sequence training from incremental decoding, account for cache memory, and test fused kernels against a clear reference.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-llm-system-map.html#scale"><div class="issue-number">10</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 10 · 13 Aug 2026</span><span>6 min read</span></div><h3>Scaling Laws and Training Budgets</h3><p>Allocate parameters, clean tokens, context, batch size, compute, and wall-clock budget without confusing size with capability.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-mixture-of-experts.html#router"><div class="issue-number">11</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 11 · 13 Aug 2026</span><span>6 min read</span></div><h3>Mixture-of-Experts Routing</h3><p>Map tokens to experts with top-k routing, distinguish total from active parameters, and trace dispatch and combine operations.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-mixture-of-experts.html#capacity"><div class="issue-number">12</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 12 · 13 Aug 2026</span><span>8 min read</span></div><h3>Expert Capacity, Balance, and Parallelism</h3><p>Handle overflow, token dropping, auxiliary losses, shared experts, expert parallel communication, and routing failure modes.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#training"><div class="issue-number">13</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 13 · 13 Aug 2026</span><span>7 min read</span></div><h3>Initialization and Optimization</h3><p>Set residual-aware initialization, AdamW parameter groups, warmup and decay schedules, gradient accumulation, and clipping.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#performance"><div class="issue-number">14</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 14 · 13 Aug 2026</span><span>8 min read</span></div><h3>Distributed Training and Throughput</h3><p>Use mixed precision, fused kernels, compilation, data parallelism, all-reduce, and exact global-token accounting.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+              <li class="title-item is-published reveal"><a href="tech-tokenization-model-design.html#evidence"><div class="issue-number">15</div><div class="issue-copy"><div class="issue-meta"><span>Chapter 15 · 13 Aug 2026</span><span>7 min read</span></div><h3>Checkpoints, Evaluation, and Reproducibility</h3><p>Package weights with optimizer and data state, compare fixed-token runs, audit contamination, and preserve the evidence behind every result.</p></div><span class="issue-action">Read <b>↗</b></span></a></li>
+            </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <p class="section-index">Pre-trained research</p>
+      <h2>Trace every contract around the weights.</h2>
+      <a class="footer-email" href="mailto:vikramkrishnakharvi@gmail.com">vikramkrishnakharvi@gmail.com <span>&nearr;</span></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Vikram Kharvi &middot; Applied AI Researcher &amp; Engineer</p>
+      <p>California &middot; <span id="local-time">Pacific time</span></p>
+      <a href="#chapters">Back to chapters &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js?v=lifecycle2"></script>
+</body>
+</html>
