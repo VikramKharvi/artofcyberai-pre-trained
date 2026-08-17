@@ -1,8 +1,28 @@
 const PAGE_URLS = [
-  "tech-llm-system-map.html",
-  "tech-tokenization-model-design.html",
-  "tech-transformer-architecture.html",
-  "tech-mixture-of-experts.html"
+  "https://pre-trained.artofcyberai.com/tech-llm-system-map.html",
+  "https://pre-trained.artofcyberai.com/tech-tokenization-model-design.html",
+  "https://pre-trained.artofcyberai.com/tech-transformer-architecture.html",
+  "https://pre-trained.artofcyberai.com/tech-mixture-of-experts.html",
+  "https://trainrl.com/tech-chatgpt-pipeline.html",
+  "https://trainrl.com/post-evals-rl-environments.html",
+  "https://trainrl.com/post-edge-of-capability.html",
+  "https://trainrl.com/post-graders-shape-models.html",
+  "https://trainrl.com/post-real-users-high-entropy.html",
+  "https://trainrl.com/post-long-horizon-context.html",
+  "https://trainrl.com/post-continual-learning.html",
+  "https://trainrl.com/post-taste-bottleneck.html",
+  "https://trainrl.com/post-ai-software-engineering.html",
+  "https://trainrl.com/post-good-agent-trajectory.html",
+  "https://inference.artofcyberai.com/inference-service-contract.html",
+  "https://inference.artofcyberai.com/inference-request-path.html",
+  "https://inference.artofcyberai.com/inference-prefill-decode.html",
+  "https://inference.artofcyberai.com/inference-kv-cache.html",
+  "https://inference.artofcyberai.com/inference-continuous-batching.html",
+  "https://inference.artofcyberai.com/inference-parallelism.html",
+  "https://inference.artofcyberai.com/inference-quantization.html",
+  "https://inference.artofcyberai.com/inference-speculative-decoding.html",
+  "https://inference.artofcyberai.com/inference-capacity-reliability.html",
+  "https://inference.artofcyberai.com/inference-load-testing.html"
 ];
 
 const STOP_WORDS = new Set([
@@ -361,7 +381,7 @@ async function prepareChat() {
     await createEngine();
     state.searchOnly = false;
     state.engineError = null;
-    addMessage("assistant", "The browser AI is ready. Ask a question about any published chapter.");
+    addMessage("assistant", "The browser AI is ready. Ask a question about any published blog.");
     setStatus("Ready \u2014 inference runs in your browser");
   } catch (error) {
     state.enginePromise = null;

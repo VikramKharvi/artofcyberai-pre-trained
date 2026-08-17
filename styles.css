@@ -656,8 +656,9 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
 @media (max-width: 760px) {
   :root { --page: calc(100vw - 32px); }
   body { background: repeating-linear-gradient(0deg, rgba(28,33,29,.025) 0 1px, transparent 1px 28px), var(--paper); }
-  .site-nav { height: 68px; grid-template-columns: 1fr 1fr; }
-  .nav-links { display: none; }
+  .site-nav { min-height: 68px; height: auto; padding: 14px 0 12px; grid-template-columns: 1fr auto; }
+  .nav-links { width: 100%; margin-top: 12px; padding-top: 12px; grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); }
+  .nav-links a { font-size: 9px; }
   .hero { min-height: auto; display: block; padding: 60px 0 75px; }
   .margin-code { display: none; }
   .hero h1 { font-size: clamp(51px, 15vw, 72px); }
