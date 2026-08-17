@@ -3,7 +3,7 @@ const PAGE_URLS = [
   "https://pre-trained.artofcyberai.com/tech-tokenization-model-design.html",
   "https://pre-trained.artofcyberai.com/tech-transformer-architecture.html",
   "https://pre-trained.artofcyberai.com/tech-mixture-of-experts.html",
-  "https://trainrl.com/tech-chatgpt-pipeline.html",
+  "https://trainrl.com/post-training-stack.html",
   "https://trainrl.com/post-evals-rl-environments.html",
   "https://trainrl.com/post-edge-of-capability.html",
   "https://trainrl.com/post-graders-shape-models.html",
