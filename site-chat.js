@@ -1,6 +1,6 @@
 const PAGE_URLS = [
   "https://pre-trained.artofcyberai.com/tech-llm-system-map.html",
-  "https://pre-trained.artofcyberai.com/tech-tokenization-model-design.html",
+  "https://pre-trained.artofcyberai.com/pre-training-llm.html",
   "https://pre-trained.artofcyberai.com/tech-transformer-architecture.html",
   "https://pre-trained.artofcyberai.com/tech-mixture-of-experts.html",
   "https://trainrl.com/post-training-stack.html",
