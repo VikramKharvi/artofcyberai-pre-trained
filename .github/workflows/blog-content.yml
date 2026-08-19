@@ -1,0 +1,25 @@
+name: Blog content contract
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate blog structure and discovery files
+        run: python scripts/blog_tool.py check
+      - name: Test the content-only authoring flow
+        run: python -m unittest discover -s tests
+      - name: Check JavaScript syntax
+        run: node --check site-chat.js && node --check script.js

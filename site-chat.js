@@ -1,4 +1,4 @@
-const PAGE_URLS = [
+const FALLBACK_PAGE_URLS = [
   "https://pre-trained.artofcyberai.com/tech-llm-system-map.html",
   "https://pre-trained.artofcyberai.com/pre-training-llm.html",
   "https://pre-trained.artofcyberai.com/tech-transformer-architecture.html",
@@ -24,6 +24,30 @@ const PAGE_URLS = [
   "https://inference.artofcyberai.com/inference-capacity-reliability.html",
   "https://inference.artofcyberai.com/inference-load-testing.html"
 ];
+
+const SITEMAP_URLS = [
+  "https://pre-trained.artofcyberai.com/sitemap.xml",
+  "https://trainrl.com/sitemap.xml",
+  "https://inference.artofcyberai.com/sitemap.xml"
+];
+
+let pageUrlsPromise = null;
+
+async function discoverPageUrls() {
+  if (pageUrlsPromise) return pageUrlsPromise;
+  pageUrlsPromise = Promise.allSettled(SITEMAP_URLS.map(async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Could not read ${url}`);
+    const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
+    return [...xml.querySelectorAll("url > loc")]
+      .map((node) => node.textContent.trim())
+      .filter((pageUrl) => /\.html$/.test(pageUrl));
+  })).then((results) => {
+    const discovered = results.flatMap((result) => result.status === "fulfilled" ? result.value : []);
+    return [...new Set([...FALLBACK_PAGE_URLS, ...discovered])];
+  });
+  return pageUrlsPromise;
+}
 
 const STOP_WORDS = new Set([
   "about", "after", "also", "an", "and", "are", "as", "at", "because", "been", "before", "being",
@@ -95,12 +119,12 @@ function chunkDocument(html, url) {
 
 async function buildIndex() {
   if (state.chunksPromise) return state.chunksPromise;
-  state.chunksPromise = Promise.all(PAGE_URLS.map(async (url, index) => {
-    setStatus(`Indexing field notes ${index + 1}/${PAGE_URLS.length}...`);
+  state.chunksPromise = discoverPageUrls().then((pageUrls) => Promise.all(pageUrls.map(async (url, index) => {
+    setStatus(`Indexing field notes ${index + 1}/${pageUrls.length}...`);
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Could not read ${url}`);
     return chunkDocument(await response.text(), url);
-  })).then((documents) => documents.flat());
+  }))).then((documents) => documents.flat());
   return state.chunksPromise;
 }
 
