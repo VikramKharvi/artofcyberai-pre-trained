@@ -2,6 +2,8 @@
 
 The scaffold owns the page shell, navigation, metadata, footer, landing-page card, sitemap entry, and assistant discovery. You write only the marked content block.
 
+> Publishing note: this command registers a blog for immediate public deployment when its commit reaches `main`. The site is currently using staged releases. Keep unreleased work off `main`, and follow the homepage repository's `RELEASE_PLAYBOOK.md` before publishing.
+
 ## 1. Create and register the page
 
 Run this from the repository root, using the slug prefix required by `blog-config.json`:

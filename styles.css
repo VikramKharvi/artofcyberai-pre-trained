@@ -458,7 +458,7 @@ footer { width: var(--page); margin: 0 auto; padding: 160px 0 45px; }
 .method-grid span { color: var(--red); font: 700 9px var(--mono); }
 .method-grid strong { margin-top: auto; font: 400 35px var(--serif); }
 .method-grid p { margin: 14px 0 0; font: 15px/1.5 var(--serif); color: var(--muted); }
-.first-issue { width: min(1350px, calc(100vw - 32px)); margin: 0 auto 100px; padding: 100px max(32px, calc((100% - 1176px)/2)); position: relative; background: var(--ink); color: var(--paper-light); transform: rotate(-.5deg); }
+.first-issue { width: min(1350px, calc(100vw - 32px)); margin: 0 auto 100px; padding: 100px clamp(32px, 6vw, 88px); position: relative; background: var(--ink); color: var(--paper-light); transform: rotate(-.5deg); }
 .first-issue h2 { max-width: 850px; margin: 0 0 30px; font: italic 400 clamp(58px,7vw,102px)/.92 var(--serif); letter-spacing: -.05em; }
 .first-issue > p:not(.section-index) { max-width: 620px; margin: 0 0 38px; font: 18px/1.55 var(--serif); color: #c8c2b6; }
 .first-issue .button-primary { background: var(--paper-light); color: var(--ink); }
